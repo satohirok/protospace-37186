@@ -16,11 +16,11 @@
           </tr>
           <tr>
             <th class="table__col1">所属</th>
-            <td class="table__col2"><%= @user.profile %></td>
+            <td class="table__col2"><%= @user.occupation %></td>
           </tr>
           <tr>
             <th class="table__col1">役職</th>
-            <td class="table__col2"><%= @user.occupation %></td>
+            <td class="table__col2"><%= @user.position %></td>
           </tr>
         </tbody>
       </table>
@@ -31,7 +31,7 @@
         <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
       <%#<% @prototypes.each do |prototype| %>
       <%#<%= render partial: 'prototype', locals: { prototype: @user } %>
-       <%= render partial: 'prototypes/prototype', collection: @prototypes %>
+       <%= render partial: 'prototypes/prototype', collection: @user.prototypes %>
    
       </div>
     </div>
